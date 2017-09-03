@@ -1,0 +1,105 @@
+/* general html setup */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ffffeb;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* begin css for coupon appearance and layout */
+
+h1 {
+  display: none;
+}
+
+.coupon_wrap {
+  margin: 5% auto;
+  max-width: 40.5rem;
+}
+
+header {
+  padding: 1rem 0 1.75rem;
+  background-color: #c93042;
+  text-align: center;
+}
+h2 {
+  font-size: 2.625rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+
+article {
+  position: relative;
+}
+.coupon_details,
+.coupon_link {
+  position: absolute;
+}
+.coupon_details {
+  top: 42.5%;
+  right: 5%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  max-width: 15.5rem;
+  background-color: #f6485f;
+  font-family: sans-serif;
+  text-align: left;
+}
+.coupon_instructions {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.coupon_info {
+  font-size: 0.875rem;
+}
+.coupon_link {
+  width: 11.75rem;
+  height: 3.5rem;
+  bottom: 5%;
+  right: 10%;
+  padding: .25rem 3.5rem;
+  border-radius: 0.625rem;
+  background-color: #ffc5c1;
+  text-align: center;
+}
+.coupon_link a.btn {
+  color: #572711;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.coupon_link a.btn:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1.5em;
+  border: 0.75em solid transparent;
+  border-left-color: #ea5338;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
