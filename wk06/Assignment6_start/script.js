@@ -19,13 +19,32 @@ var churchillSpeech = {
     },
     speechesArray = [churchillSpeech, ghandiSpeech, demosthenesSpeech],
     userNamePrompt,
-    favoriteSpeechPrompt;
+    favoriteSpeechPrompt,
+    // variables for newest/oldest speeches
+    newestSpeech = speechesArray[0].year,
+    oldestSpeech = speechesArray[0].year,
+    i = 0; // new variable added, and end of variable list
+
+// Loop through speeches to display the author
+while (i < speechesArray.length) {
+  console.log("This speech is written by " + speechesArray[i].author);
+  i++;
+} // closes while loop
+
+// loop through speech year to determine newest/oldest
+for (i = 0; i < speechesArray.length; i++) {
+  if (speechesArray[i].year >= newestSpeech) {
+    newestSpeech = speechesArray[i].year;
+  } else if (speechesArray[i].year <= oldestSpeech) {
+    oldestSpeech = speechesArray[i].year;
+  } // closes if and else if
+} //closes for loop
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   favoriteSpeechPrompt = window.prompt('Which speech author is your favorite?');
 
-  switch(favoriteSpeechPrompt){
+  /* switch(favoriteSpeechPrompt){
     case 'Churchill':
       console.log(speechesArray[0].author + ' was ' + speechesArray[0].authorAge + ' during this speech.');
       break;
@@ -38,8 +57,16 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
     default:
       console.log('Did you spell that name correctly?');
       break;
-  }
-});
+  } */
+
+  // for loop through speeches to find match
+  for(var i = 0; i < speechesArray.length; i++) {
+    if (favoriteSpeechPrompt === speechesArray[i].author) {
+      console.log(speechesArray[i].author + ' was ' + speechesArray[i].authorAge + ' during this speech.');
+      break;
+    } // closes the if
+  } // closes the for loop
+});  // closes the function
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
@@ -51,10 +78,17 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
     console.log('This speech took place during the common era.');
   }
 
-  if(speechesArray[0].year < speechesArray[1].year && speechesArray[0].year < speechesArray[2].year){
+  /* if(speechesArray[0].year < speechesArray[1].year && speechesArray[0].year < speechesArray[2].year){
     console.log('This is the oldest speech on the page.');
   }else if(speechesArray[0].year > speechesArray[1].year && speechesArray[0].year > speechesArray[2].year){
     console.log('This is the most recent speech on the page.');
+  } */
+
+  // check against newest/oldest speech year
+  if (speechesArray[0].year >= newestSpeech) {
+    console.log('This is the most recent speech on the page.');
+  } else if (speechesArray[0].year <= oldestSpeech) {
+    console.log('This is the oldest speech on the page.');
   }
 });
 
@@ -68,10 +102,17 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
     console.log('This speech took place during the common era.');
   }
 
-  if(speechesArray[1].year < speechesArray[0].year && speechesArray[1].year < speechesArray[2].year){
+  /* if(speechesArray[1].year < speechesArray[0].year && speechesArray[1].year < speechesArray[2].year){
     console.log('This is the oldest speech on the page.');
   }else if(speechesArray[1].year > speechesArray[0].year && speechesArray[1].year > speechesArray[2].year){
     console.log('This is the most recent speech on the page.');
+  } */
+
+  // check against newest/oldest speech year
+  if (speechesArray[1].year >= newestSpeech) {
+    console.log('This is the most recent speech on the page.');
+  } else if (speechesArray[1].year <= oldestSpeech) {
+    console.log('This is the oldest speech on the page.');
   }
 });
 
@@ -85,19 +126,25 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
     console.log('This speech took place during the common era.');
   }
 
-  if(speechesArray[2].year < speechesArray[0].year && speechesArray[2].year < speechesArray[1].year){
+  /* if(speechesArray[2].year < speechesArray[0].year && speechesArray[2].year < speechesArray[1].year){
     console.log('This is the oldest speech on the page.');
   }else if(speechesArray[2].year > speechesArray[0].year && speechesArray[2].year > speechesArray[1].year){
     console.log('This is the most recent speech on the page.');
+  } */
+
+  // check against newest/oldest speech year
+  if (speechesArray[2].year >= newestSpeech) {
+    console.log('This is the most recent speech on the page.');
+  } else if (speechesArray[2].year <= oldestSpeech) {
+    console.log('This is the oldest speech on the page.');
   }
 });
 
-
-userNamePrompt = window.prompt('Hello, what is your name?');
+/* userNamePrompt = window.prompt('Hello, what is your name?');
 
 if(typeof userNamePrompt === 'string' && userNamePrompt !== ''){
   console.log('Hi ' + userNamePrompt + '!');
 }else{
   console.log('Ok, I\'ll just call you User.');
   userNamePrompt = 'User';
-}
+} */
