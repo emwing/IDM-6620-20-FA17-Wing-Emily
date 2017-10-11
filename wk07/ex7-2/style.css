@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background: #ededed;
+  text-align: center;
+}
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+h1 {
+  margin: 0.75rem 0;
+  font: 2rem 'Shrikhand', cursive;
+}
+h2 {
+  font: 1.25rem 'Shadows Into Light', arial, sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 0.25rem;
+}
+
+div {
+  padding: 0.5rem;
+  float: left;
+  width: 12.5%;
+  transition: all 4s ease-out;
+  -webkit-transition: all 4s ease-out;
+  -moz-transition: all 4s ease-out;
+}
+div:hover { cursor: pointer; }
+
+#red    { background-color: red; }
+#orange { background-color: orange; }
+#yellow { background-color: yellow; }
+#green  { background-color: green; }
+#teal   { background-color: darkturquoise; }
+#blue   { background-color: blue; }
+#indigo { background-color: indigo; }
+#violet { background-color: violet; }
+
+/* appearance controls of .aDiv in html default */
+.start {
+  height: 3rem;
+  color: rgba(255, 255, 255, 1.0);
+  text-shadow: 0 0 0.125rem rgba(17, 17, 17, 1.0);
+}
+
+/* appearance controls of .aDiv with javascript onclick */
+.end {
+  height: 100vh;
+  color: rgba(255, 255, 255, 0.0);
+  text-shadow: 0 0 0 rgba(17, 17, 17, 0);
+}

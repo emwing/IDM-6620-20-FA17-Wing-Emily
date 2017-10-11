@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+html {
+  box-sizing: border-box;
+  font: 16px arial, sans-serif;
+  background: #ededed;
+}
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after { clear: both; }
+
+h1 { display: none; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
