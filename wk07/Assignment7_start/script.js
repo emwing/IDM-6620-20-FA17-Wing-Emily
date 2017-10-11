@@ -20,9 +20,46 @@ var churchillSpeech = {
     speechesArray = [churchillSpeech, ghandiSpeech, demosthenesSpeech],
     donatePrompt;
 
+
+
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+  // received error when trying to remove previous donation message???
+  // document.getElementById('SideNav').removeChild(newDonate);
+
+  // create the html elements for each piece of info in the div
+  var newDonate = document.createElement("h3");
+
+  var donation = window.prompt('How much would you like to donate?');
+
+  // create textNodes for new elements
+  if(donation < 100) {
+    var newDonateText = document.createTextNode("Thank you for your donation of $" + donation + "!");
+  } else if(donation >= 100) {
+    var newDonateText = document.createTextNode("Thank you for your very generous donation!");
+  } else {
+    var newDonateText = document.createTextNode("Sorry, I don\'t understand the donation amount.");
+  }
+
+  // add textNodes to elements
+  newDonate.appendChild(newDonateText);
+
+  // insert into html document
+  document.getElementById("SideNav").appendChild(newDonate);
+
+  // set attributes
+  var articleClass = document.getElementsByTagName("article");
+
+  for (i = 0; i < articleClass.length; i++) {
+    if (donation >= 100) {
+      newDonate.setAttribute("style", "color: red;"); // color the h3 in the SideNav
+      articleClass[i].className = ("generous-donation"); // color the h2s in the articles
+    }
+  }
 });
+
+
+// For the ConsoleDisplay appends, I chose to not use innerHTML since it isn't as specific.
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
@@ -76,6 +113,8 @@ document.getElementById('BtnChurchill').addEventListener('click', function(){
   document.getElementById("ConsoleDisplay").appendChild(newParaYear);
 });
 
+
+
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
   // empty the div
@@ -127,6 +166,8 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
   document.getElementById("ConsoleDisplay").appendChild(newParaBCE);
   document.getElementById("ConsoleDisplay").appendChild(newParaYear);
 });
+
+
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Demosthenes" button.
