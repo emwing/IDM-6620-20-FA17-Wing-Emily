@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+}
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+/* general settings */
+.daytime {
+  background: #ededed;
+  position: relative;
+  overflow-y: hidden;
+}
+h1,
+h2 {
+  font: 2rem "Rock Salt", impact, sans-serif;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+}
+h1 {
+  margin-top: 1em;
+  color: black;
+}
+svg {
+  margin: -3rem auto 0;
+  max-width: 100%;
+  display: block;
+}
+.hidden {
+  color: rgba(255, 255, 255, 0);
+}
+
+/* onclick animations h1 set */
+  /* animate the faceGroup to glow */
+  .glowfill {
+    fill: black;
+    animation: glowOrange 5s ease-in-out 1.5s infinite;
+  }
+  @keyframes glowOrange {
+    0% { fill: black; }
+    15% { fill: darkorange; }
+    50% { fill: yellow; }
+    85% { fill: darkorange; }
+    100% { fill: black; }
+  }
+
+  /* decrease opacity on the coverGroup fill */
+  .fillopacity {
+    fill-opacity: 0.75;
+    animation: darkenCover 3s ease-out 1;
+  }
+  @keyframes darkenCover {
+    0% { fill-opacity: 0; }
+    100% { fill-opacity: 0.75; }
+  }
+
+  /* change the background-color to black */
+  .nighttime {
+    background-color: #000;
+    animation: nightbg 3s ease-out 1;
+  }
+  @keyframes nightbg {
+    0% { background-color: #ededed; }
+    100% { background-color: #000; }
+  }
+
+  /* make h2 click for a trick appear */
+  .show {
+    color: rgba(255, 255, 255, 1);
+    animation: showboo 3s ease-in 1;
+  }
+  @keyframes showboo {
+    0% { color: rgba(255, 255, 255, 0); }
+    100% { color: rgba(255, 255, 255, 1); }
+  }
+
+/* onclick animations h2 set */
+  /* first set ghost to hidden */
+  .invisible {
+    position: fixed;
+    bottom: -2000px;
+    left: 50%;
+    transform: translateX(-50%);
+    fill-opacity: 0;
+    z-index: -10;
+  }
+
+  /* slide ghost up and fade in */
+  .haunt {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    fill-opacity: 1;
+    z-index: 10;
+    animation: haunting 3s ease-in-out 1;
+  }
+  @keyframes haunting {
+    0% {
+      top: 1010px;
+      fill-opacity: 0;
+    }
+    50% {
+      fill-opacity: 0.25;
+    }
+    100% {
+      top: 0%;
+      fill-opacity: 1;
+    }
+  }
