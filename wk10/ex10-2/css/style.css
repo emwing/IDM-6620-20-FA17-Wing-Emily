@@ -1,3 +1,5 @@
+/* added new css for exercise 10-2 on line 326 */
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,600,700);
 html {
     font-size: 62.5%;
@@ -320,6 +322,19 @@ em {
 #products {
     /*.product-list*/
 }
+
+/* added new css for layout of added checkboxes */
+#product-checkboxes {
+  margin-bottom: 0.5em;
+}
+#product-checkboxes h3 {
+  display: inline-block;
+}
+#product-checkboxes input {
+  display: inline-block;
+  margin-left: 1em;
+}
+/* end new css */
 
 #products .imageheader {
     background: -webkit-linear-gradient(top, transparent, transparent), url(../images/backgrounds/swimming.jpg);
