@@ -1,4 +1,4 @@
-/* created class for jquery background color change on click, line 155*/
+/* created class for jquery background color change on click, line 155, added new img controls for addition of icon.png */
 
 body {
 margin: 0px;
@@ -154,4 +154,8 @@ color: #FFFFFF;
 
 .bgChangeCol {
   background-color: #0A7272;
+}
+
+img {
+  display: inline-block;
 }
