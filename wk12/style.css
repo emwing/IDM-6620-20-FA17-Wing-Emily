@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Crimson Text', times, serif;
+  color: #222;
+  line-height: 1.4;
+  letter-spacing: 0.0625rem;
+}
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+body {
+  max-width: 120rem;
+  background: #efefef url("img/ricepaper2.png") repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#leftNavTabs li {
+  font-family: 'Montserrat', arial, sans-serif;
+}
+
+.pageWrap {
+  margin: 2.5% auto 0;
+  display: block;
+  max-width: 90rem;
+}
+
+
+/* leftNav section layout controls */
+#leftNav {
+  float: left;
+  position: relative;
+  width: 25%;
+  height: 90vh;
+}
+#leftNavTabs {
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+#leftNavTabs li {
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #fff;
+  border-radius: 1rem 0 0 1rem;
+}
+#homeTab {
+  background-color: #222;
+  color: #fff;
+}
+#applesauceTab { background-color: green; }
+#muffinsTab { background-color: teal; }
+#brineTab { background-color: blue; }
+#chiliTab { background-color: indigo; }
+#porkTab { background-color: violet; }
+#saladTab { background-color: red; }
+#soupTab { background-color: orange; }
+
+
+/* rightDisplay section layout controls */
+#rightDisplay {
+  /*padding-top: 5%;*/
+  float: right;
+  width: 75%;
+  background-color: #fff;
+}
+.recipeArticle {
+  padding: 5%;
+  min-height: 80vh;
+  border-radius: 0 1rem 1rem 0;
+}
+.recipeArticle ul,
+.recipeArticle ol { margin-left: 2.5rem; }
+
+.recipeInfo,
+.recipeReview,
+.recipeIngredients,
+.recipeDirections {
+  margin: 0 auto 1rem;
+  max-width: 48rem;
+  display: block;
+}
+#homeArticle { border: 0.25rem solid #222; }
+#applesauceArticle { border: 0.25rem solid green; }
+#muffinsArticle { border: 0.25rem solid teal; }
+#brineArticle { border: 0.25rem solid blue; }
+#chiliArticle { border: 0.25rem solid indigo; }
+#porkArticle { border: 0.25rem solid violet; }
+#saladArticle { border: 0.25rem solid red; }
+#soupArticle { border: 0.25rem solid orange; }
