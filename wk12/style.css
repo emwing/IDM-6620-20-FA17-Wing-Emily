@@ -32,7 +32,7 @@ h6,
 }
 
 .pageWrap {
-  margin: 2.5% auto 0;
+  margin: 1.5% auto 0;
   display: block;
   max-width: 90rem;
 }
@@ -47,18 +47,19 @@ h6,
 }
 #leftNavTabs {
   position: absolute;
-  top: 5%;
-  right: 0;
+  top: 2.5%;
+  left: 0;
+  width: 100%;
 }
 #leftNavTabs li {
   margin-bottom: 0.5rem;
   padding: 1rem;
-  width: 100%;
   list-style-type: none;
   font-weight: bold;
   font-size: 1.125rem;
   color: #fff;
   border-radius: 1rem 0 0 1rem;
+  cursor: pointer;
 }
 #homeTab {
   background-color: #222;
@@ -75,15 +76,16 @@ h6,
 
 /* rightDisplay section layout controls */
 #rightDisplay {
-  /*padding-top: 5%;*/
+  position: relative;
   float: right;
   width: 75%;
-  background-color: #fff;
+  z-index: 100;
 }
 .recipeArticle {
-  padding: 5%;
+  padding: 2.5%;
   min-height: 80vh;
   border-radius: 0 1rem 1rem 0;
+  background-color: #fff;
 }
 .recipeArticle ul,
 .recipeArticle ol { margin-left: 2.5rem; }
@@ -92,15 +94,48 @@ h6,
 .recipeReview,
 .recipeIngredients,
 .recipeDirections {
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.75rem;
   max-width: 48rem;
   display: block;
 }
-#homeArticle { border: 0.25rem solid #222; }
-#applesauceArticle { border: 0.25rem solid green; }
-#muffinsArticle { border: 0.25rem solid teal; }
-#brineArticle { border: 0.25rem solid blue; }
-#chiliArticle { border: 0.25rem solid indigo; }
-#porkArticle { border: 0.25rem solid violet; }
-#saladArticle { border: 0.25rem solid red; }
-#soupArticle { border: 0.25rem solid orange; }
+#homeArticle {
+  position: absolute;
+  right: -100vw;
+  position: relative;
+  border: 0.5rem solid #222;
+  display: block;
+}
+.homeInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+h1 {
+  margin-bottom: 1em;
+  font-size: 2.5rem;
+}
+#applesauceArticle,
+#muffinsArticle,
+#brineArticle,
+#chiliArticle,
+#porkArticle,
+#saladArticle,
+#soupArticle { display: none; }
+
+#applesauceArticle { border: 0.5rem solid green; }
+#muffinsArticle { border: 0.5rem solid teal; }
+#brineArticle { border: 0.5rem solid blue; }
+#chiliArticle { border: 0.5rem solid indigo; }
+#porkArticle { border: 0.5rem solid violet; }
+#saladArticle { border: 0.5rem solid red; }
+#soupArticle { border: 0.5rem solid orange; }
+
+
+footer {
+  margin-top: 1rem;
+  clear: both;
+  text-align: right;
+  font-size: 0.875rem;
+}

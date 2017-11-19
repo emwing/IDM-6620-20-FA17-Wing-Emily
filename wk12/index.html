@@ -11,30 +11,36 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://use.fontawesome.com/506df0e47b.js"></script>
   </head>
   <body>
     <div class="pageWrap">
       <section id="leftNav">
-        <ul id="leftNavTabs" class="recipeTabs">
-          <li id="homeTab" class="recipeTabs">Home</li>
-          <li id="applesauceTab" class="recipeTabs">Sarah's Applesauce</li>
-          <li id="muffinsTab" class="recipeTabs">Morning Glory Muffins I</li>
-          <li id="brineTab" class="recipeTabs">Out of this World Turkey Brine</li>
-          <li id="chiliTab" class="recipeTabs">White Chili IV</li>
-          <li id="porkTab" class="recipeTabs">Glenn's Marinated Pork Shoulder</li>
-          <li id="saladTab" class="recipeTabs">Mojito Fruit Salad</li>
-          <li id="soupTab" class="recipeTabs">Vegan Hot and Sour Soup</li>
+        <ul id="leftNavTabs">
+          <li id="homeTab" class="recipeTabs" data-rel="homeArticle">Home</li>
+          <li id="applesauceTab" class="recipeTabs" data-rel="applesauceArticle">Sarah's Applesauce</li>
+          <li id="muffinsTab" class="recipeTabs" data-rel="muffinsArticle">Morning Glory Muffins I</li>
+          <li id="brineTab" class="recipeTabs" data-rel="brineArticle">Out of this World Turkey Brine</li>
+          <li id="chiliTab" class="recipeTabs" data-rel="chiliArticle">White Chili IV</li>
+          <li id="porkTab" class="recipeTabs" data-rel="porkArticle">Glenn's Marinated Pork Shoulder</li>
+          <li id="saladTab" class="recipeTabs" data-rel="saladArticle">Mojito Fruit Salad</li>
+          <li id="soupTab" class="recipeTabs" data-rel="soupArticle">Vegan Hot and Sour Soup</li>
         </ul>
       </section>
 
       <section id="rightDisplay">
         <article id="homeArticle" class="recipeArticle">
-          <div class="recipeInfo">
-            <h1>Favorite Recipes from <a href="#">allrecipes.com</a></h1>
+          <div class="recipeInfo homeInfo">
+            <h1>Favorite Recipes borrowed from <a href="#">allrecipes.com</a> for educational purposes</h1>
+            <i class="iconnav fa fa-facebook-square fa-5x"></i>
+            <i class="iconnav fa fa-twitter-square fa-5x"></i>
+            <i class="iconnav fa fa-google-plus-square fa-5x"></i>
+            <i class="iconnav fa fa-youtube-square fa-5x"></i>
+            <i class="iconnav fa fa-instagram fa-5x"></i>
           </div>
         </article>
-        
-        <article id="applesauceArticle" class="recipeArticle">
+
+        <article id="applesauceArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>Sarah's Applesauce</h2>
             <p>Prep Time: 10 Minutes</p>
@@ -66,7 +72,7 @@
           </div>
         </article> <!-- ends #applesauceArticle -->
 
-        <article id="muffinsArticle" class="recipeArticle">
+        <article id="muffinsArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>Morning Glory Muffins I</h2>
             <p>Prep Time: 15 Minutes</p>
@@ -113,7 +119,7 @@
           </div>
         </article> <!-- ends #muffinsArticle -->
 
-        <article id="brineArticle" class="recipeArticle">
+        <article id="brineArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>Out of this World Turkey Brine</h2>
             <p>Servings: 12</p>
@@ -143,7 +149,7 @@
           </div>
         </article> <!-- ends #brineArticle -->
 
-        <article id="chiliArticle" class="recipeArticle">
+        <article id="chiliArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>White Chili IV</h2>
             <p>Prep Time: 1 Hour</p>
@@ -190,7 +196,7 @@
           </div>
         </article> <!-- ends #chiliArticle -->
 
-        <article id="porkArticle" class="recipeArticle">
+        <article id="porkArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>Glenn's Marinated Pork Shoulder</h2>
             <p>Prep Time: 15 Minutes</p>
@@ -237,7 +243,7 @@
           </div>
         </article> <!-- ends #porkArticle -->
 
-        <article id="saladArticle" class="recipeArticle">
+        <article id="saladArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>Mojito Fruit Salad</h2>
             <p>Prep Time: 20 Minutes</p>
@@ -273,7 +279,7 @@
           </div>
         </article> <!-- ends #saladArticle -->
 
-        <article id="soupArticle" class="recipeArticle">
+        <article id="soupArticle" class="recipeArticle startHidden">
           <div class="recipeInfo">
             <h2>Vegan Hot and Sour Soup</h2>
             <p>Prep Time: 45 Minutes</p>
@@ -321,6 +327,8 @@
           </div>
         </article> <!-- ends #soupArticle -->
       </section> <!-- ends #rightDisplay -->
+
+      <footer>Emily Wing | Assignment 12</footer>
     </div> <!-- ends .pageWrap -->
 
     <script type="text/javascript" src="script.js"></script>
