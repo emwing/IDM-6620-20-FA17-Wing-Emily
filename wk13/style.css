@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Roboto', arial, sans-serif;
+  text-align: center;
+  background: #ededed url("img/asanoha-400px.png") repeat;
+}
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+/* general appearance controls */
+header {
+  padding: 3rem;
+  background: #e50031;
+  border-bottom: 0.25rem solid #b70027;
+}
+
+.pagewrap {
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  width: 75%;
+  height: 40rem;
+  background-color: #fff;
+}
+
+h1,
+button {
+  font-family: 'Slabo 27px', times, serif;
+  letter-spacing: 0.125rem;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 0 0 2px #111;
+}
+
+button {
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ededed;
+  border: 0.25rem solid #e50031;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.flashcard {
+  margin-bottom: 2rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+.flashcard p:first-child {
+  font-size: 2.25rem;
+}
