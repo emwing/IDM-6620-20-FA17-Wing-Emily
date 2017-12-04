@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -10,59 +9,159 @@ html {
   text-align: center;
   background: #ededed url("img/asanoha-400px.png") repeat;
 }
-
 *,
 *:before,
 *:after { box-sizing: inherit; }
 
-/* general appearance controls */
+/* header appearance controls */
 header {
-  padding: 3rem;
+  padding: 2rem;
   background: #e50031;
   border-bottom: 0.25rem solid #b70027;
 }
-
-.pagewrap {
-  margin: 0 auto;
-  padding: 2rem;
-  position: relative;
-  width: 75%;
-  height: 40rem;
-  background-color: #fff;
-}
-
-h1,
-button {
-  font-family: 'Slabo 27px', times, serif;
-  letter-spacing: 0.125rem;
-}
-
 h1 {
   color: #fff;
   font-size: 3rem;
   text-shadow: 0 0 2px #111;
 }
 
+/* button appearance */
+h1,
+button {
+  font-family: 'Slabo 27px', times, serif;
+  letter-spacing: 0.125rem;
+}
 button {
   padding: 1rem 2rem;
   position: absolute;
-  bottom: 10%;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   background-color: #ededed;
-  border: 0.25rem solid #e50031;
+  border: 0.125rem solid #e50031;
+  border-radius: 0.25rem;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.flashcard {
-  margin-bottom: 2rem;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
+/* container controls */
+.sectionWrap {
+  margin: 0 auto 1rem;
+  padding: 1.5rem;
+  position: relative;
+  width: 75%;
+  min-height: 42rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #fff;
 }
-.flashcard p:first-child {
-  font-size: 2.25rem;
+
+/* card controls */
+#stack {
+  margin: 5rem auto 2rem;
+  position: relative;
+  width: 20rem;
+}
+.card {
+  position: absolute;
+  width: 20rem;
+  height: 12rem;
+  -ms-transform-origin: 0% 135%;
+  -webkit-transform-origin: 0% 135%;
+  transform-origin: 0% 135%;
+}
+.front {
+  position: absolute;
+  width: 20rem;
+  height: 12rem;
+  z-index: 2;
+  border: 0.0625rem solid #111;
+  background: #ffffe2 url("img/ricepaper2.png") repeat;
+  text-align: center;
+}
+.front h2 {
+  font-size: 1.5rem;
+  line-height: 11rem;
+}
+.back {
+  padding: 3rem 4.5rem;
+  position: absolute;
+  width: 20rem;
+  height: 12rem;
+  z-index: 1;
+  border: 0.0625rem solid #111;
+  background: #ffffe2 url("img/ricepaper2.png") repeat;
+  color: #00a4b3;
+  font-size: 1.25rem;
+  text-align: left;
+  -ms-transform: rotateX(-180deg);
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+#card01 {
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+#card02 {
+  top: 0.375rem;
+  right: 0.125rem;
+  z-index: 9;
+}
+#card03 {
+  top: 0.75rem;
+  right: 0.25rem;
+  z-index: 8;
+}
+#card04 {
+  top: 1.125rem;
+  right: 0.375rem;
+  z-index: 7;
+}
+#card05 {
+  top: 1.5rem;
+  right: 0.5rem;
+  z-index: 6;
+}
+#card06 {
+  top: 1.875rem;
+  right: 0.625rem;
+  z-index: 5;
+}
+#card07 {
+  top: 2.25rem;
+  right: 0.75rem;
+  z-index: 4;
+}
+#card08 {
+  top: 2.625rem;
+  right: 0.875rem;
+  z-index: 3;
+}
+#card09 {
+  top: 3rem;
+  right: 1rem;
+  z-index: 2;
+}
+#card10 {
+  top: 3.375rem;
+  right: 1.125rem;
+  z-index: 1;
+}
+
+/* card animation (controlled by javascript) */
+.frontflipped {
+  -ms-transform: rotateX(-180deg) translateY(2rem);
+  -webkit-transform: rotateX(-180deg) translateY(2rem);
+  transform: rotateX(-180deg) translateY(2rem);
+  animation: fflip 0.6s;
+}
+.backflipped { animation: bflip 0.6s; }
+
+@keyframes fflip {
+  from  { transform: rotateX(0deg) translateY(0); }
+  to    { transform: rotateX(-180deg) translateY(2rem); }
+}
+@keyframes bflip {
+  0% { z-index: 10; }
+  50% { z-index: 0; }
 }
